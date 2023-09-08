@@ -24,16 +24,13 @@ const Header = () => {
   },[])
 
   return (
-    <div id="vanta" >
-      
-        <header className=" h-[100vh] flex flex-col header-shadow" >
-            {/* <img className="  h-full w-full z-[-99] absolute" src="../src/assets/img/bgheader3.png" alt="" /> */}
-            
+    <header className="" id="" >
+        <div className=" h-[100vh] flex flex-col overflow-hidden relative " >
+            {/* <img className="h-full w-full z-[-99] fixed" src="../src/assets/img/bgheader3.png" alt="" /> */}
             <Menu />      
-            <img className=" m-auto h-[35rem] sm:h-[65rem] "
-            src="../src/assets/img/logolight.png" alt="logo-KnelaFyna"  />
-        </header>
-    </div>
+            <img className=" m-auto h-[45rem] md:h-[60rem] "src="../src/assets/img/logo-lightmode.png" alt="logo-KnelaFyna"  />
+          </div>
+    </header>
   )
 }
 

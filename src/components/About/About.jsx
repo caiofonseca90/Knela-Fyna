@@ -1,35 +1,20 @@
 const About = () => {
   return (
-    <div className="m-auto ">
+    <div className="m-auto flex h-[100vh] w-full ">
         {/* section about name */}
-        <section className="flex flex-col items-center lg:m-auto py-[2rem] bg-slate-100 "> 
-            <img className="h-[15rem] w-[23rem] " src="../src/assets/img/namekneladark.png" alt="" />
-            <div className="flex flex-col lg:flex-row lg:justify-center py-[4rem] mx-5">
-              <span className="lg:text-[2.2rem] text-[1.5rem] md:w-[90vw] xl:w-[70vw] 2xl:w-[50vw] ">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus error iure modi possimus sint excepturi aperiam est debitis dolorem labore, deleniti facilis eius architecto vero ipsam. Aut corporis ullam quas?
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus error iure modi possimus sint excepturi aperiam est debitis dolorem labore, deleniti facilis eius architecto vero ipsam. Aut corporis ullam quas?
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus error iure modi possimus sint excepturi aperiam est debitis dolorem labore, deleniti facilis eius architecto vero ipsam. Aut corporis ullam quas?
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus error iure modi possimus sint excepturi aperiam est debitis dolorem labore, deleniti facilis eius architecto vero ipsam. Aut corporis ullam quas?
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus error iure modi possimus sint excepturi aperiam est debitis dolorem labore, deleniti facilis eius architecto vero ipsam. Aut corporis ullam quas?
+        <section className="py-[5rem] items-center gap-11 px-[2rem] flex flex-col-reverse lg:justify-evenly lg:flex-row w-full"> 
+            <img className="w-[350px] xl:w-[500px] lg:rounded-full" src="../src/assets/img/freeza.jpeg" alt="imgfreeza" />
+            <div className="flex flex-col items-center gap-10">
+              <a id="#about" className=" text-[2.5rem] text-slate-600 font-extrabold" href="#">Sobre</a>
+              <img className="w-[250px] " src="../src/assets/img/namekneladark.png" alt="" />
+              <span className="text-[2.2rem] text-center lg:text-[3rem] lg:w-[60vw] xl:w-[50vw] 2xl:w-[35vw]  ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus tempore sed et cum voluptatum provident 
+                delectus consectetur ab error quisquam ratione minima, atque officiis iure corrupti maxime ipsa soluta. Eligendi!
               </span>
+              <a href="#" className="bg-slate-950 text-white text-[3rem] border py-4 px-10 rounded-2xl shadow-xl float-left cursor-pointer">Saiba mais</a>
             </div>
         </section>
-        {/* section history */}
-        <section className="flex flex-col items-center lg:m-auto py-[2rem] bg-black "> 
-            <h1 className="text-[5rem] text-white font-extrabold">História</h1>
-            <div className="flex flex-col lg:flex-row lg:justify-center gap-16 mx-5 ">
-              <img className="rounded-2xl h-[30rem] w-[40rem] lg:h-[60rem] lg:w-[55rem] m-auto " src="https://images.squarespace-cdn.com/content/v1/641a832cd4167e73e6d2e927/d5842088-2960-44d2-934b-035e40a43240/giphy+-+2023-04-14T232624.983.gif?format=1000w" alt="" />
-              <span className=" text-white lg:text-[2.2rem] text-[1.5rem] flex flex-col lg:w-[40vw] ">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus error iure modi possimus sint excepturi aperiam est debitis dolorem labore, deleniti facilis eius architecto vero ipsam. Aut corporis ullam quas?
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus error iure modi possimus sint excepturi aperiam est debitis dolorem labore, deleniti facilis eius architecto vero ipsam. Aut corporis ullam quas?
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus error iure modi possimus sint excepturi aperiam est debitis dolorem labore, deleniti facilis eius architecto vero ipsam. Aut corporis ullam quas?
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus error iure modi possimus sint excepturi aperiam est debitis dolorem labore, deleniti facilis eius architecto vero ipsam. Aut corporis ullam quas?
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus error iure modi possimus sint excepturi aperiam est debitis dolorem labore, deleniti facilis eius architecto vero ipsam. Aut corporis ullam quas?
-              </span>
-            </div>
-        </section>
-    </div>
-    
+      </div>
   )
 }
 
