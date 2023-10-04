@@ -2,6 +2,13 @@ import { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Menuhamb = () => {
+  const menuItems = [
+    { id: "home", text: "Inicio" },
+    { id: "about", text: "Sobre" },
+    { id: "prod", text: "Produtos" },
+    { id: "contato", text: "Contatos" },
+  ];
+
   const [open, setOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -23,20 +30,42 @@ const Menuhamb = () => {
   }, []);
 
   return (
-    <div className="">
-      <AiOutlineMenu className={`${ open ? "hidden " : "block" } float-right mr-[4.5rem] mt-7 text-[3.1rem] md:hidden cursor-pointer text-black`}
+    <div className="z-50 fixed right-0 drop-shadow-">
+      <AiOutlineMenu
+        className={`${
+          open ? "hidden " : "block"
+        } float-right mr-[4.5rem] mt-7 text-[3.5rem] font-extrabold md:hidden cursor-pointer text-slate-50 drop-shadow `}
         onClick={toggleMenu}
       />
-      <div className={`h-screen w-screen bg-black bg-opacity-50 transition-opacity 
-        ${open && windowWidth <= 768 ? "visible " : "invisible"}`}
-        onClick={toggleMenu}
+      <div
+        className={`w-screen h-screen bg-black bg-opacity-40 transition-opacity  ${
+          open && windowWidth <= 768 ? "block" : "hidden"
+        }`}
+        onClick={() => {
+          toggleMenu(); // Fecha o menu ao clicar no modal
+        }}
       />
-      <nav className={`custom-menu ${ open ? "transform translate-x-0 " : "transform translate-x-full " } `}>
-        <AiOutlineClose className="absolute top-10 right-10 mr-10 text-[3.1rem] cursor-pointer  text-white" onClick={toggleMenu}/>
-        <a href="#" className=" text-[1.5rem] pb-[3rem] lg:pb-[8rem] pt-[3rem] hover:text-slate-400 duration-150" >Inicio</a>
-        <a href="#"className="  text-[1.5rem] pb-[3rem] lg:pb-[8rem] hover:text-slate-400 duration-150">História</a>
-        <a href="#" className=" text-[1.5rem] pb-[3rem] lg:pb-[8rem] hover:text-slate-400 duration-150">Produtos</a>
-        <a href="#" className=" text-[1.5rem] pb-[3rem] lg:pb-[8rem] hover:text-slate-400 duration-150">Contatos</a>
+      <nav
+        className={`custom-menu  ${
+          open ? "transform translate-x-0 " : "transform translate-x-full "
+        }`}
+      >
+        <AiOutlineClose
+          className="absolute top-5 right-10 mr-10 text-[3.1rem] cursor-pointer text-white "
+          onClick={toggleMenu}
+        />
+        {menuItems.map((item) => (
+          <a
+            key={item.id}
+            href={`#${item.id}`}
+            className="text-[1.5rem] pb-[3rem] lg:pb-[8rem] hover:text-slate-400 duration-150"
+            onClick={() => {
+            toggleMenu(); // Fecha o menu ao clicar em um item do menu
+            }}
+          >
+            {item.text}
+          </a>
+        ))}
       </nav>
     </div>
   );

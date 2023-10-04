@@ -1,19 +1,23 @@
-import './App.css'
-import Header from './components/Header/Header'
-import About from './components/About/About'
-import Card from './components/Cards/Card'
-import Contact from './components/Contact/Contact'
+import "./App.css";
+
+import Menu from "./components/Menu/Menu";
+import Menuhamb from "./components/Hamburguer/Menuhamb";
+import Header from "./components/Header/Header";
+import Products from "./components/Products/Products";
+import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
 
 function App() {
-  
   return (
-    <div className='flex flex-col gap-11 ' >
+    <div className="flex-col h-full" >
+      <Menu />
+      <Menuhamb />
       <Header />
       <About />
-      <Card />
+      <Products />
       <Contact />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
