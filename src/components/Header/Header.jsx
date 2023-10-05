@@ -23,9 +23,10 @@ const Header = () => {
   return (
     <header className=" vanta" id="home">
       <div className="h-[100vh] w-full flex flex-col">
-        <img className="m-auto h-[45rem] md:h-[60rem]" src="../src/assets/img/logo-lightmode.png" alt="logo-KnelaFyna"/>
+        <img className="m-auto h-[45rem] md:h-[60rem]" src={"https://raw.githubusercontent.com/caiofonseca90/Knela-Fyna/main/src/assets/img/logo-lightmode.png"} alt="logo-KnelaFyna"/>
       </div>
     </header>
+    
   );
 };
 

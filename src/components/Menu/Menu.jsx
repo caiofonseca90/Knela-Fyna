@@ -13,10 +13,9 @@ const Menu = () => {
       const section = document.getElementById(sectionId);
       section.scrollIntoView({ behavior:'smooth' });
     };
-
     
   return (
-    <header className="md:shadow-md fixed w-screen text-slate-100 h-[8rem] md:backdrop-blur-lg z-50 ">
+    <header className="md:shadow-md fixed w-screen text-slate-200 h-[8rem] md:backdrop-blur-lg z-50 ">
       <div className="py-5 mx-[1rem] lg:px-[10rem] flex justify-center text-[1.5rem] max-md:hidden font-bold items-center  ">
         <a
           href="#home"
@@ -24,11 +23,11 @@ const Menu = () => {
         >
           <img
             className="h-[6rem] w-[6rem] "
-            src="../src/assets/img/logofreeza.png"
+            src={"https://github.com/caiofonseca90/Knela-Fyna/blob/main/src/assets/img/logofreeza.png?raw=true"}
             alt="logo"
           />
         </a>
-        <ul className="flex justify-evenly float-right w-[50rem] text-white">
+        <ul className="flex justify-evenly float-right w-[50rem] text-white drop-shadow-md">
           {menuItems.map((item) => (
             <Link
               key={item.id}

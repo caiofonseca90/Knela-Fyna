@@ -34,17 +34,17 @@ const Products = () => {
   }, []);
 
   return (
-    <div className="relative h-[100vh] w-screen flex flex-col m-auto justify-center items-center bg-black overflow-hidden" id="prod">
+    <div className="relative h-[100vh] w-full flex flex-col m-auto justify-center items-center bg-black overflow-hidden" id="prod">
          <img 
           className="absolute w-[70rem] md:w-[90rem] lg:w-[100rem] 2xl:w-[150rem] top-[15rem] left-0 md:top-[10rem] opacity-10"
-          src="../src/assets/img/motomobile.png"
+          src={"https://github.com/caiofonseca90/Knela-Fyna/blob/main/src/assets/img/motomobile.png?raw=true"}
           alt="logoknela"
         />
       {/* section text */}
       <div className="w-full flex flex-col lg:flex-row lg:justify-evenly items-center relative text-slate-100">
         <section className="flex flex-col items-center lg:items-start gap-10 ]">
         <h1 className="hover:text-yellow-300 text-[2.5rem] text-slate-200 font-extrabold cursor-pointer">Produtos</h1>
-          <span className="text-[3rem] lg:text-[5rem] lg:w-[55rem] xl:w-[70rem]">
+          <span className="text-[3rem] lg:text-[5rem] lg:w-[55rem] xl:w-[70rem] text-center">
             <strong>Tudo</strong> o que <strong>você</strong> procura está{" "}
             <strong>aqui!</strong>
           </span>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { Link } from 'react-scroll';
 
 const Menuhamb = () => {
   const menuItems = [
@@ -8,6 +9,11 @@ const Menuhamb = () => {
     { id: "prod", text: "Produtos" },
     { id: "contato", text: "Contatos" },
   ];
+
+   const scrollToSection = (sectionId) => {
+      const section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior:'smooth' });
+    };
 
   const [open, setOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -55,16 +61,21 @@ const Menuhamb = () => {
           onClick={toggleMenu}
         />
         {menuItems.map((item) => (
-          <a
+          <Link
             key={item.id}
+            spy={true}
+            smooth={true}
+            offset={50} 
+            duration={900}
             href={`#${item.id}`}
             className="text-[1.5rem] pb-[3rem] lg:pb-[8rem] hover:text-slate-400 duration-150"
             onClick={() => {
+            scrollToSection(item.id)
             toggleMenu(); // Fecha o menu ao clicar em um item do menu
             }}
           >
             {item.text}
-          </a>
+          </Link>
         ))}
       </nav>
     </div>

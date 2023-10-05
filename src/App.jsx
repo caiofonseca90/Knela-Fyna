@@ -9,7 +9,7 @@ import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
-    <div className="flex-col h-full" >
+    <div className="flex flex-col h-full " >
       <Menu />
       <Menuhamb />
       <Header />
