@@ -33,8 +33,8 @@ const Menu = () => {
               key={item.id}
               spy={true}
               smooth={true}
-              offset={50} 
-              duration={900}
+              offset={80} 
+              duration={1000}
               href={`#${item.id}`}
               className="hover:text-slate-400 duration-150"
               onClick={() => scrollToSection(item.id)}

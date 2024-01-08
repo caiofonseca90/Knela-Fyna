@@ -9,13 +9,17 @@ import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
-    <div className="flex flex-col h-full " >
-      <Menu />
-      <Menuhamb />
-      <Header />
-      <About />
-      <Products />
-      <Contact />
+
+    <div className="vanta">
+      
+      <div className="flex flex-col fullbg " >
+        <Menu />
+        <Menuhamb />
+        <Header />
+        <About />
+        <Products />
+        <Contact />
+      </div>
     </div>
   );
 }

@@ -58,7 +58,7 @@ const About = () => {
   }, []);
 
   // Função para aplicar negrito às palavras em negrito
-  const applyBoldFormatting = (text) => {
+  const letraNegrito = (text) => {
     const words = text.split(/\s+/); // Dividir por espaços em branco
     return words.map((word, index) => (
       <span
@@ -80,17 +80,15 @@ const About = () => {
   return (
     <Parallax
       className="bg-fixed h-[110vh]  "
-      bgImage={bgImage}
+      // bgImage={bgImage}
       strength={1200}
       bgImageStyle={backgroundImageStyle}
     >
-      <div className="h-[100%] flex justify-center" id="about">
-        <div className="bg-black h-[6rem] w-full absolute items-center flex justify-center">
-          <img className="h-[100%]" src="" alt="" />
-        </div>
-        <section className=" flex flex-col items-center justify-center pt-[2rem] ">
+      <div className="h-[100%] flex justify-center " id="about">
+        {/* <div className="bg-black h-[6rem] w-full absolute items-center flex justify-center"></div> */}
+        <section className="text-white flex flex-col items-center justify-center float-left pt-[2rem] gap-10">
           <h1
-            className="hover:text-slate-900 text-[2.5rem] font-extrabold cursor-pointer mt-[5rem]"
+            className=" text-[2.5rem] font-extrabold cursor-pointer mt-[5rem]"
             href=""
           >
             Sobre
@@ -103,13 +101,13 @@ const About = () => {
             alt="logoknela"
           />
           {/* paragrafo */}
-          <div className=" w-[80vw] md:w-[70vw] lg:w-[55vw] xl:w-[45vw] m-auto backdrop-blur-sm gap-5 flex flex-col ">
+          <div className=" w-[70vw] md:w-[50vw] lg:w-[65vw] xl:w-[45vw] m-auto backdrop-blur-sm gap-5 flex flex-col z-30">
             {paragraphs.map((paragraph, index) => (
               <p
                 key={index}
-                className="drop-shadow-md about-font  "
+                className="drop-shadow-md about-font "
               >
-                {applyBoldFormatting(paragraph, palavrasEmNegrito)}
+                {letraNegrito(paragraph, palavrasEmNegrito)}
               </p>
             ))}
           </div>

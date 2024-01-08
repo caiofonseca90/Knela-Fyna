@@ -26,29 +26,19 @@ const Contact = () => {
         console.log("Erro ", err)
       })
   }
-  const validateName = (value,e) => {
-    const regex = /^[A-Za-z\s]+$/; // Regex para permitir apenas letras e espaços
-    const keyCode = e.keyCode || e.which;
-    
-    if (!regex.test(value) && (keyCode >= 48 && keyCode <= 57)) {
-      e.preventDefault(); // Impede a ação padrão (inserir o número)
-      return 'Por favor, insira um nome válido';
+
+  const validateName = (e) => {
+    const valueName = e.key;
+    if (!/^[A-Za-z\s]+$/.test(valueName)) {
+      e.preventDefault(); 
     }
-    return true;
   };
 
-  return (
-    <div className="h-[100vh] lg:h-[80vh] flex items-center bg-black text-white" id='contato'>
-      <div className='flex flex-col-reverse lg:flex-row justify-around lg:min-w-[60vw] m-auto'>
-        <section className='text-[3rem] lg:gap-10 lg:text-[6rem] w-[20rem] items-center justify-around lg:justify-center flex lg:flex-col m-auto lg:pt-[15rem]'>
-          <Contactwpp className='cursor-pointer hover:scale-110 duration-150 ease-in-out'  />
-          <a href={urlInsta} target='blank'>
-            <AiOutlineInstagram className='cursor-pointer hover:scale-110 duration-150 ease-in-out'  />
-          </a>
-          {/* <AiFillFacebook className='cursor-pointer hover:scale-110 duration-150 ease-in-out' /> */}
-        </section>
 
-        <form className='mx-5 flex flex-col justify-around items-center lg:w-[50rem] h-[600px] mb-[3rem] ' onSubmit={handleSubmit(onSubmit)}>
+  return (
+    <div className="h-[100vh] lg:h-[100vh] flex justify-center items-center text-white " id='contato'>
+      <div className='flex flex-col-reverse lg:flex-col justify-center items-center lg:min-w-[40vw]'>
+        <form className='mx-5 flex flex-col justify-around items-center lg:w-[50rem] h-[600px] mb-[3rem]' onSubmit={handleSubmit(onSubmit)}>
           <img
             className="w-[220px]"
             src={"https://github.com/caiofonseca90/Knela-Fyna/blob/main/src/assets/img/logo-darkmode.png?raw=true"}
@@ -67,19 +57,19 @@ const Contact = () => {
                   type="text"
                   className="w-full h-[4.5rem] rounded placeholder:text-[2rem] text-[2rem] text-black p-5 outline-none"
                   placeholder='Nome:'
+                  onKeyDown={validateName}
                   onBlur={(e) => {
                     e.target.value = e.target.value.replace(/\d/g, ''); // Remove números
                   }}
                 />
               )}
               rules={{ validate: validateName }} // Validação personalizada
-              
             />
-
             {/* Email */}
             <Controller
               name="email"
               control={control}
+              
               defaultValue=""
               render={({ field }) => (
                 <input
@@ -90,7 +80,6 @@ const Contact = () => {
                 />
               )}
             />
-
             {/* Phone */}
             <Controller
               name="phone"
@@ -109,12 +98,18 @@ const Contact = () => {
             />
           </div>
 
-          <div className="mt-5">
+          <div className="mt-[3rem]">
             <button type="submit"
-              className="px-[6rem] py-[1rem] rounded-lg text-[2.5rem] text-white hover:text-slate-300 hover:scale-110 duration-75">
+              className="px-[6rem] py-[1rem] rounded-lg text-[2.5rem] text-slate-200 hover:text-white hover:scale-110 duration-75">
               Enviar
             </button>
           </div>
+          <section className='text-[3rem] lg:gap-10 lg:text-[6rem] w-[20rem] items-center flex justify-around lg:justify-center mt-[3rem] '>
+            <Contactwpp className='cursor-pointer hover:scale-110 duration-150 ease-in-out'  />
+            <a href={urlInsta} target='blank'>
+              <AiOutlineInstagram className='cursor-pointer hover:scale-110 duration-150 ease-in-out'  />
+            </a>
+          </section>
         </form>
       </div>
     </div>

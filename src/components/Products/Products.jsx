@@ -14,10 +14,15 @@ import 'swiper/css/effect-fade';
 const Products = () => {
   const [slideShow, setSlideShow] = useState(1);
   const data = [
-    {id: "1",image:"https://github.com/caiofonseca90/Knela-Fyna/blob/main/src/assets/img/produtos/abridor-knela.JPG?raw=true"},
-    {id: "2",image:"https://github.com/caiofonseca90/Knela-Fyna/blob/main/src/assets/img/produtos/caneca-knela.JPG?raw=true"},
-    {id: "3",image:"https://i.pinimg.com/236x/a6/f2/53/a6f25369334938bc1a3efe14f1f3d229.jpg"},
-    {id: "4",image:"https://i.pinimg.com/236x/a6/f2/53/a6f25369334938bc1a3efe14f1f3d229.jpg"}
+    {id: "1",image:"https://github.com/caiofonseca90/Knela-Fyna/blob/main/src/assets/img/produtos/1.jpeg"},
+    {id: "2",image:"https://github.com/caiofonseca90/Knela-Fyna/blob/main/src/assets/img/produtos/2.jpeg?raw=true"},
+    {id: "3",image:"https://github.com/caiofonseca90/Knela-Fyna/blob/main/src/assets/img/produtos/3.jpeg?raw=true"},
+    {id: "4",image:"https://github.com/caiofonseca90/Knela-Fyna/blob/main/src/assets/img/produtos/4.jpeg?raw=true"},
+    {id: "5",image:"https://github.com/caiofonseca90/Knela-Fyna/blob/main/src/assets/img/produtos/5.jpeg?raw=true"},
+    {id: "6",image:"https://github.com/caiofonseca90/Knela-Fyna/blob/main/src/assets/img/produtos/6.jpeg?raw=true"},
+    {id: "7",image:"https://github.com/caiofonseca90/Knela-Fyna/blob/main/src/assets/img/produtos/7.jpeg?raw=true"},
+    {id: "8",image:"https://github.com/caiofonseca90/Knela-Fyna/blob/main/src/assets/img/produtos/8.jpeg?raw=true"},
+    {id: "9",image:"https://github.com/caiofonseca90/Knela-Fyna/blob/main/src/assets/img/produtos/9.jpeg?raw=true"}
   ];
 
   useEffect(() => {
@@ -34,16 +39,11 @@ const Products = () => {
   }, []);
 
   return (
-    <div className="relative h-[100vh] w-full flex flex-col m-auto justify-center items-center bg-black overflow-hidden" id="prod">
-         <img 
-          className="absolute w-[70rem] md:w-[90rem] lg:w-[100rem] 2xl:w-[150rem] top-[15rem] left-0 md:top-[10rem] opacity-10"
-          src={"https://github.com/caiofonseca90/Knela-Fyna/blob/main/src/assets/img/motomobile.png?raw=true"}
-          alt="logoknela"
-        />
+    <div className="relative h-[100vh] w-full flex flex-col m-auto justify-center items-center bg-transparent overflow-hidden" id="prod">
       {/* section text */}
       <div className="w-full flex flex-col lg:flex-row lg:justify-evenly items-center relative text-slate-100">
         <section className="flex flex-col items-center lg:items-start gap-10 ]">
-        <h1 className="hover:text-yellow-300 text-[2.5rem] text-slate-200 font-extrabold cursor-pointer">Produtos</h1>
+        <h1 className="text-[2.5rem] text-slate-200 font-extrabold cursor-pointer">Produtos</h1>
           <span className="text-[3rem] lg:text-[5rem] lg:w-[55rem] xl:w-[70rem] text-center">
             <strong>Tudo</strong> o que <strong>você</strong> procura está{" "}
             <strong>aqui!</strong>
