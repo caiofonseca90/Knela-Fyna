@@ -14,7 +14,7 @@ import 'swiper/css/effect-fade';
 const Products = () => {
   const [slideShow, setSlideShow] = useState(1);
   const data = [
-    {id: "1",image:"https://github.com/caiofonseca90/Knela-Fyna/blob/main/src/assets/img/produtos/1.jpeg"},
+    {id: "1",image:"https://github.com/caiofonseca90/Knela-Fyna/blob/main/src/assets/img/produtos/1.jpeg?raw=true"},
     {id: "2",image:"https://github.com/caiofonseca90/Knela-Fyna/blob/main/src/assets/img/produtos/2.jpeg?raw=true"},
     {id: "3",image:"https://github.com/caiofonseca90/Knela-Fyna/blob/main/src/assets/img/produtos/3.jpeg?raw=true"},
     {id: "4",image:"https://github.com/caiofonseca90/Knela-Fyna/blob/main/src/assets/img/produtos/4.jpeg?raw=true"},
@@ -45,8 +45,8 @@ const Products = () => {
         <section className="flex flex-col items-center lg:items-start gap-10 ]">
         <h1 className="text-[2.5rem] text-slate-200 font-extrabold cursor-pointer">Produtos</h1>
           <span className="text-[3rem] lg:text-[5rem] lg:w-[55rem] xl:w-[70rem] text-center">
-            <strong>Tudo</strong> o que <strong>você</strong> procura está{" "}
-            <strong>aqui!</strong>
+            <strong>Acessórios </strong>e <strong>roupas</strong> original{" "}<br></br>
+            <strong>Knela Fyna style!</strong>
           </span>
         </section>
         {/* section prod */}
@@ -61,7 +61,7 @@ const Products = () => {
               <SwiperSlide key={item.id}>
                 <img
                   src={item.image}
-                  alt="Slider"
+                  alt=""
                   className="mt-[5rem] w-[100%] h-[300px] lg:h-[450px] rounded-2xl "
                 />
               </SwiperSlide>

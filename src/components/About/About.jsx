@@ -27,7 +27,7 @@ const dynamicText = `
 const palavrasEmNegrito = [
   "harleys",
   "oldschool,",
-  "rock","and","roll",
+  "rock","and","roll,",
   "clubber",
   "chicano","style",
   "knela","fyna"
@@ -101,7 +101,7 @@ const About = () => {
             alt="logoknela"
           />
           {/* paragrafo */}
-          <div className=" w-[70vw] md:w-[50vw] lg:w-[65vw] xl:w-[45vw] m-auto backdrop-blur-sm gap-5 flex flex-col z-30">
+          <div className=" w-[70vw] md:w-[50vw] lg:w-[65vw] xl:w-[45vw] m-auto backdrop-blur-sm gap-5 flex flex-col z-99">
             {paragraphs.map((paragraph, index) => (
               <p
                 key={index}
